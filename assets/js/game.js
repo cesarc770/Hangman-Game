@@ -27,19 +27,14 @@ console.log(str);
 
 function compare(userInput, str, chosenWord) {
 	for(var i = 0; i < chosenWord.length; i++){
-
 		if(userInput === chosenWord[i]){
-
 			str[i] = userInput;
 		}
 	} return str;
 
-
 }
 
-var a = compare("a", [" _ ", " _ ", " _ "], "dad");
 
-console.log(a);
 
 
 //obtain input from user and save it in a variable
@@ -49,6 +44,8 @@ document.onkeyup = function(event){
 
 //everything that will happen when the key comes up goes in here
 
+//compare userInput and the chosenWord and add to space str
+console.log(compare(userInput, str, chosenWord));
 
 
 
