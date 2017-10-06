@@ -1,0 +1,29 @@
+body{
+	font-size: 16px;
+}
+
+.panel-heading{
+	font-size: 26px;
+}
+
+#spaces{
+	font-size: 30px;
+}
+
+.rock-salt{
+font-family: 'Rock Salt', cursive;
+}
+
+.luckiest-guy{
+font-family: 'Luckiest Guy', cursive;
+}
+.cabin-sketch{
+
+font-family: 'Cabin Sketch', cursive;
+
+}
+
+#result{
+font-size: 45px;
+
+

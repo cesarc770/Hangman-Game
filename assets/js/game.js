@@ -57,7 +57,7 @@ function inputLetters(userInput){
 function winGame(chosenWord){
 
 if(spaces.innerHTML.toLowerCase() == chosenWord){
-	result.innerHTML = "<p>you win</p><div style=\"width:50%;height:0;padding-bottom:15%;position:relative;\"><iframe src=\"https://giphy.com/embed/3oD3YFjkwL38aAlfwI\" width=\"100%\" height=\"100%\" style=\"position:absolute\" frameBorder=\"0\" class=\"giphy-embed\" allowFullScreen></iframe></div>";
+	result.innerHTML = "<p class=\"animate-result\">you win</p><div style=\"width:50%;height:200px;padding-bottom:15%;position:relative;\" class\"faded\"><iframe src=\"https://giphy.com/embed/3oD3YFjkwL38aAlfwI\" width=\"100%\" height=\"100%\" style=\"position:absolute\" frameBorder=\"0\" class=\"giphy-embed\" allowFullScreen></iframe></div>";
 	wins++;
 }
 }
@@ -66,7 +66,7 @@ function lose(){
 	if(tries === 0){
 	result.innerHTML = "you lose";
 }
-isPlaying = false;
+
 }
 
 //Function to compare userInput to word and store it in an array
@@ -107,7 +107,7 @@ function reset(){
 function isGameOver(){
 
 	if(!(tries > 0 && !(spaces.innerHTML.toLowerCase() == chosenWord))){
-	message.innerHTML = "<div> <button class=\"btn btn-danger\" onclick=\"reset();\"> Play Again </button>  "
+	message.innerHTML = "<br><div> <button class=\"btn btn-danger\" onclick=\"reset();\"> Play Again </button>  "
 	                    + "</div>"
 	}
 }
@@ -148,6 +148,7 @@ $("#guessed").append(inputLetters(userInput) + " ");
 
 // Creating buttons
 var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+//var letters = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Z", "X", "C", "V", "B", "N", "M"];
 
  for(var i = 0; i < letters.length; i++){
 
@@ -187,5 +188,14 @@ var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
 		isGameOver();
       });
 
+//other special effects
 
-     
+function blinker() {
+    $('.animate-result').fadeOut(500);
+    $('.animate-result').fadeIn(500);
+}
+
+setInterval(blinker, 1000);
+
+
+

@@ -2,12 +2,14 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Hangman-Game</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Rock+Salt" rel="stylesheet"> 
-<!-- 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">-->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Luckiest+Guy|Rock+Salt" rel="stylesheet">
 </head>
 <body onload = "initialSetup()">
 	<main class="container">
@@ -15,28 +17,37 @@
 		<dir class="col-sm-6 text-center">
 			<div class="panel panel-success">
 				<div class="panel-heading">
-					<p>Wins: <span id="win"></span></p>
+					<p class="rock-salt">Wins: <span id="win"></span></p>
 				</div>
 				<div class="panel-body">
 					<div class="row">
-						<p>Guesses Remaining: <span id="remaining"></span></p>
-						<p>Letters Guessed: <span id="guessed"></span></p>
-						<span id="result"></span>
+						<p class="cabin-sketch">Guesses Remaining: <span id="remaining"></span></p>
+						<p class="cabin-sketch">Letters Guessed: <span id="guessed"></span></p>
+						<span id="result" class="animate-result luckiest-guy"></span>
 						<span id="message"></span>						
 					</div>
 					<div class="row">
-						<p class="lead">
-						<span id="spaces"></span></p>
+						<p class="lead"><span id="spaces"></span></p>
 					</div>
 					
 
 				</div>
+				<div class="panel-footer center-block">
+					<div id=buttons></div>
+					
+				</div>
 				
+			</div>
+
+			<div class="row">
+				<div>
+					<!--possible link to go back to other categories-->
+				</div>
 				
 			</div>
 			
 		</dir>
-		<div class="col-sm-3" id="buttons"></div>
+		<div class="col-sm-3" ></div>
 		
 				
 	</main>
