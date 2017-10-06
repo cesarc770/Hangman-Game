@@ -165,10 +165,27 @@ var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
 
       }
 
-      $(".letter-button").on("click", function(){
-       
-        fridgeMagnet.addClass("letter fridge-color");
-        fridgeMagnet.text($(this).attr("data-letter"));
-        $("#display").append(fridgeMagnet);
+       $(".letter-button").on("click", function(){
+
+		var uInput = $(this).attr("data-letter");
+		for(var i = 0; i < chosenWord.length; i++){
+			if(uInput === chosenWord[i].toUpperCase()){
+				str[i] = uInput;
+		}
+	}	
+		$("#spaces").html(str);
+		spaces.innerHTML = str.join("");
+
+		reduceTries(uInput);
+		remaining.innerHTML = tries;
+
+		winGame(chosenWord);
+		win.innerHTML = wins;
+
+		lose();
+
+		isGameOver();
       });
 
+
+     
