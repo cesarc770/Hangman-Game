@@ -7,16 +7,40 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Rock+Salt" rel="stylesheet"> 
- 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!-- 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">-->
 </head>
-<body>
+<body onload = "initialSetup()">
 	<main class="container">
-	<p>Wins: </p>
-	<p>Guess this word: <span id="spaces" ></span></p>
-	<p>Guesses Remaining:</p>
-	<p>Letters Guessed: <span id="guessed"></span></p>
+		<div class="col-sm-3"></div>
+		<dir class="col-sm-6 text-center">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<p>Wins: <span id="win"></span></p>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<p>Guesses Remaining: <span id="remaining"></span></p>
+						<p>Letters Guessed: <span id="guessed"></span></p>
+						<span id="result"></span>
+						<span id="message"></span>						
+					</div>
+					<div class="row">
+						<p class="lead">
+						<span id="spaces"></span></p>
+					</div>
+					
+
+				</div>
+				
+				
+			</div>
 			
-	<script type="text/javascript" src="assets/js/game.js"></script>	
+		</dir>
+		<div class="col-sm-3" id="buttons"></div>
+		
+				
 	</main>
+
+	<script type="text/javascript" src="assets/js/game.js"></script>
 </body>
 </html>
