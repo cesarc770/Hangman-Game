@@ -177,7 +177,7 @@ if(tries > 0 && !(spaces.innerHTML.toLowerCase() == chosenWord)){
 		$("#spaces").html(str);
 		spaces.innerHTML = str.join("");
 
-		reduceTries(uInput);
+		reduceTries(uInput.toLowerCase());
 		remaining.innerHTML = tries;
 
 		winGame(chosenWord);
