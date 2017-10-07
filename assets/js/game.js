@@ -174,6 +174,9 @@ if(tries > 0 && !(spaces.innerHTML.toLowerCase() == chosenWord)){
 				str[i] = uInput;
 		}
 	}	
+
+	$("#guessed").append(inputLetters(uInput) + " ");
+
 		$("#spaces").html(str);
 		spaces.innerHTML = str.join("");
 
