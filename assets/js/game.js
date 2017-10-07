@@ -3,7 +3,7 @@
 // create an object game to store words, choose a word  tries
 
 var game = {
-	words : ["referee", "ronaldo", "goal", "pichichi","outswinger", "plyometrics", "stretching", "volley"],
+	words : ["referee", "ronaldo", "goal", "pichichi","outswinger", "plyometrics", "stretching", "volley", "peripheral"],
 	tries : 10,
 	chosenWord : function(){ return this.words[Math.floor(Math.random() * this.words.length)];},
 
@@ -15,7 +15,7 @@ var guessed = document.getElementById("guessed");
 var remaining = document.getElementById("remaining");
 var result = document.getElementById("result");
 var win = document.getElementById("win");
-
+var loseGif = "<div style=\"width:50%;height:200px;padding-bottom:0%;position:relative;\"><iframe src=\"https://giphy.com/embed/Z2n51rH9rybkY\" width=\"100%\" height=\"100%\" style=\"position:absolute\" frameBorder=\"0\" class=\"giphy-embed\" allowFullScreen></iframe></div><p><a href=\"https://giphy.com/gifs/men-less-Z2n51rH9rybkY\"></a></p>";
 //create function to display word in spaces
 var chosenWord = game.chosenWord();
 var tries = game.tries;
@@ -64,7 +64,7 @@ if(spaces.innerHTML.toLowerCase() == chosenWord){
 
 function lose(){
 	if(tries === 0){
-	result.innerHTML = "you lose";
+	result.innerHTML = "<p class=\"animate-result\">you lose</p>" + loseGif;
 }
 
 }
@@ -175,7 +175,7 @@ if(tries > 0 && !(spaces.innerHTML.toLowerCase() == chosenWord)){
 		}
 	}	
 
-	$("#guessed").append(inputLetters(uInput) + " ");
+	$("#guessed").append(inputLetters(uInput.toLowerCase()) + " ");
 
 		$("#spaces").html(str);
 		spaces.innerHTML = str.join("");

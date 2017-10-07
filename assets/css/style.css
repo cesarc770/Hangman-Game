@@ -1,5 +1,15 @@
 body{
 	font-size: 16px;
+	  background: url("../images/stadium1.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.panel-success{
+	border-width: 5px;
 }
 
 .panel-heading{
