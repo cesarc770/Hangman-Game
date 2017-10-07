@@ -3,7 +3,7 @@
 // create an object game to store words, choose a word  tries
 
 var game = {
-	words : ["referee", "ronaldo", "goal", "pichichi"],
+	words : ["referee", "ronaldo", "goal", "pichichi","outswinger", "plyometrics", "stretching", "volley"],
 	tries : 10,
 	chosenWord : function(){ return this.words[Math.floor(Math.random() * this.words.length)];},
 
