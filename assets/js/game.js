@@ -167,7 +167,7 @@ var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
       }
 
        $(".letter-button").on("click", function(){
-
+if(tries > 0 && !(spaces.innerHTML.toLowerCase() == chosenWord)){
 		var uInput = $(this).attr("data-letter");
 		for(var i = 0; i < chosenWord.length; i++){
 			if(uInput === chosenWord[i].toUpperCase()){
@@ -186,6 +186,7 @@ var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
 		lose();
 
 		isGameOver();
+	}
       });
 
 //other special effects
