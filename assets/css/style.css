@@ -1,13 +1,17 @@
 body{
 	font-size: 16px;
-	  background: url("../images/stadium1.jpg") no-repeat center center fixed; 
+	background: url("../images/stadium1.jpg") no-repeat center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
 }
 
-
+.panel{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
 .panel-success{
 	border-width: 5px;
 }
@@ -35,5 +39,68 @@ font-family: 'Cabin Sketch', cursive;
 
 #result{
 font-size: 45px;
+}
+
+.color-btn{
+	margin-bottom: 3px;
+	min-width: 100px;
+}
 
 
+.col-sm-9{
+	margin: 0;
+	height: 100%;
+}
+
+.col-sm-3{
+background: rgba(0, 0, 0, 0.5); 
+height: 150%;
+
+}
+
+main{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+a:hover {
+
+}
+
+#choose{
+	margin: 15px;
+	color: white;
+}
+
+@media screen and (max-width: 768px) {
+	.float-left{
+	float: left;
+	max-width: 150px;
+}
+
+.col-sm-3{
+	clear: both;
+	height: 30%;
+}
+
+
+}
+
+@media screen and (max-width: 640px) {
+	.float-left{
+	float: left;
+	max-width: 110px;
+}
+
+.col-sm-3{
+	clear: both;
+	height: 20%;
+}
+
+
+}

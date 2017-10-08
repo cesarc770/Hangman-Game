@@ -58,6 +58,7 @@ function winGame(chosenWord){
 
 if(spaces.innerHTML.toLowerCase() == chosenWord){
 	result.innerHTML = "<p class=\"animate-result\">you win</p><div style=\"width:50%; height:200px;padding-bottom:15%;position:relative;\" class\"faded\"><iframe src=\"https://giphy.com/embed/3oD3YFjkwL38aAlfwI\" width=\"100%\" height=\"100%\" style=\"position:absolute\" frameBorder=\"0\" class=\"giphy-embed\" allowFullScreen></iframe></div>";
+
 	wins++;
 }
 }
@@ -65,6 +66,7 @@ if(spaces.innerHTML.toLowerCase() == chosenWord){
 function lose(){
 	if(tries === 0){
 	result.innerHTML = "<p class=\"animate-result\">you lose</p>" + loseGif;
+
 }
 
 }
