@@ -203,5 +203,34 @@ function blinker() {
 
 setInterval(blinker, 1000);
 
+//show player
+$("#Real").on("click", function(){
+	var image = "<img src=\"assets\\images\\ronaldo.png\" class=\"img-player\">"
+	$("#player").html(image);
+	$(".panel-success").css("border", "5px lightgrey solid");
+	$(".panel-heading").css("background-color", "white");
+	$(".panel-heading").css("color", "#F1ECF8");
+	$(".panel-body").css("background-color", "#F1ECF8");
+	$(".panel-body").css("color", "black");
+	$(".panel-footer").css("background-color", "white");
+	$(".letter-button-color").css("background-color", "#F1ECF8");
+	$(".letter-button-color").css("border-color", "lightgrey");
+	$(".letter-button-color").css("color", "white");
+});
+
+$("#Barcelona").on("click", function(){
+	var image = "<img src=\"assets\\images\\messi.png\" class=\"img-player\">"
+	$("#player").html(image);
+	$(".panel-success").css("border", "5px #151B88 solid");
+	$(".panel-heading").css("background-color", "#151B88");
+	$(".panel-heading").css("color", "#A41D23");
+	$(".panel-body").css("background-color", "#A41D23");
+	$(".panel-body").css("color", "yellow");
+	$(".panel-footer").css("background-color", "#151B88");
+	$(".letter-button-color").css("background-color", "#151B88");
+	$(".letter-button-color").css("color", "yellow");
+	$(".letter-button-color").css("border-color", "yellow");
+});
+
 
 
