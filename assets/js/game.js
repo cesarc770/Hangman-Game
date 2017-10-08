@@ -34,11 +34,15 @@ var str  = displayWord(chosenWord);
 console.log(chosenWord);
 console.log(str);
 
+var strGuesses ="";
+
+
 //function to reduce tries --- not working yet / not being used
 function reduceTries(userInput){
-	if(!spaces.innerHTML.toLowerCase().includes(userInput)){
-		tries--;
+	if(!spaces.innerHTML.toLowerCase().includes(userInput) && !guessed.innerHTML.toLowerCase().includes(userInput)){			
+			tries--;	
 	}
+
 	return tries;
 }
 
@@ -47,6 +51,7 @@ function inputLetters(userInput){
 
 	if(!guessed.innerHTML.toLowerCase().includes(userInput)){
 		return userInput.toUpperCase();
+		strGuesses += userInput.toUpperCase();
 	} else {
 		return "";
 	}
@@ -116,7 +121,6 @@ function isGameOver(){
 
 
 
-
 //obtain input from user and save it in a variable
 
 document.onkeyup = function(event){
@@ -127,7 +131,7 @@ if(tries > 0 && !(spaces.innerHTML.toLowerCase() == chosenWord)){
 
 	//add letter to guessed letters 
 
-$("#guessed").append(inputLetters(userInput) + " ");
+
 	//compare userInput and the chosenWord and add to space str
 	console.log(compare(userInput, str, chosenWord));
 
@@ -136,6 +140,8 @@ $("#guessed").append(inputLetters(userInput) + " ");
 	//reduce tries if guess is not there
 	reduceTries(userInput);
 	remaining.innerHTML = tries;
+
+	$("#guessed").append(inputLetters(userInput) + " ");
 
 	//win game
 	winGame(chosenWord);
@@ -177,13 +183,16 @@ if(tries > 0 && !(spaces.innerHTML.toLowerCase() == chosenWord)){
 		}
 	}	
 
-	$("#guessed").append(inputLetters(uInput.toLowerCase()) + " ");
 
 		$("#spaces").html(str);
 		spaces.innerHTML = str.join("");
 
+
+
 		reduceTries(uInput.toLowerCase());
 		remaining.innerHTML = tries;
+
+		$("#guessed").append(inputLetters(uInput.toLowerCase()) + " ");
 
 		winGame(chosenWord);
 		win.innerHTML = wins;
