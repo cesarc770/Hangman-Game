@@ -218,13 +218,13 @@ $("#Real").on("click", function(){
 	$("#player").html(image);
 	$(".panel-success").css("border", "5px lightgrey solid");
 	$(".panel-heading").css("background-color", "white");
-	$(".panel-heading").css("color", "#F1ECF8");
+	$(".panel-heading").css("color", "#DEE084");
 	$(".panel-body").css("background-color", "#F1ECF8");
 	$(".panel-body").css("color", "black");
 	$(".panel-footer").css("background-color", "white");
 	$(".letter-button-color").css("background-color", "#F1ECF8");
-	$(".letter-button-color").css("border-color", "lightgrey");
-	$(".letter-button-color").css("color", "white");
+	$(".letter-button-color").css("border-color", "#DEE084");
+	$(".letter-button-color").css("color", "black");
 });
 
 $("#Barcelona").on("click", function(){
