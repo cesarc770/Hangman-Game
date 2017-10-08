@@ -4,7 +4,7 @@
 
 var game = {
 	words : ["referee", "ronaldo", "goal", "pichichi","outswinger", "plyometrics", "stretching", "volley", "peripheral"],
-	tries : 10,
+	tries : 8,
 	chosenWord : function(){ return this.words[Math.floor(Math.random() * this.words.length)];},
 
 }
@@ -92,7 +92,7 @@ function compare(userInput, str, chosenWord) {
 //set up screen
 function initialSetup(){
 spaces.innerHTML = str.join("");
-remaining.innerHTML = 10;
+remaining.innerHTML = 8;
 win.innerHTML = wins;
 }
 
